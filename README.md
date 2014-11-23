@@ -16,18 +16,21 @@ Before start, I have to point the fact that the repository doesn't have the unco
 
 ## Instructions
 
-In order to execute the the script you should execute the following commands inside the R console, and also uncompress the zip dataset file, if the data folder is named different from "UCI HAR Dataset" then you need to pass the folder name as an argument to the runAnalysis function if not write the following code:
+First load the R script file into the workspace
 
-* source("run_analysis.R")
-* runAnalysis()
+`source("run_analysis.R")`
+
+Now in order to execute the the script you should execute the following commands inside the R console, and also uncompress the zip dataset file, if the data folder is named different from "UCI HAR Dataset" then you need to pass the folder name as an argument to the runAnalysis function if not write the following code:
+
+`runAnalysis()`
 
 By default the script will try to locate the folder with name "UCI HAR Dataset" in the same directory as the script:
 
-* runAnalysis(directory = './UCI HAR Dataset')
+`runAnalysis(directory = './UCI HAR Dataset')`
 
 However it's possible to pass the directory parameter in order to locate the exact path of the data directory, for example:
 
-* runAnalysis("/home/gustav/UCI HAR Dataset")
+`runAnalysis("/home/gustav/UCI HAR Dataset")`
 
 The script will create a tidy data set containing the means of all the columns per test subject and per activity. This tidy dataset will be written to a tab-delimited file called tidy.txt, which can also be found in this repository.
 
